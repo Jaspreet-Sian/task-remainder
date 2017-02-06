@@ -1,0 +1,20 @@
+<head>
+  <title>Form</title>
+</head>
+<body>
+    {{>applicationLayout}}
+
+</body>
+ <template name="home">
+   <div class="home-container">
+     <h2>Task Remainder</h2>
+     <nav class="nav-wrapper">
+       <a href="#" class="btn taskInsetion">Add Task</a>
+       <a href="#" class="btn taskDetail">Search for Task details</a>
+     </nav>
+   </div>
+</template>
+
+<template name="applicationLayout">
+      {{>Template.dynamic template=main}}
+</template>

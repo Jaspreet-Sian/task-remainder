@@ -1,0 +1,49 @@
+<template name="addTask">
+  <div class="form-container ">
+    <nav class="nav-container">
+      <a href="#" class="home btn">Back to home</a>
+      <a href="#" class="taskDetail btn">Search for Task details</a>
+    </nav>
+    <h2 class="center">Task Detail</h2>
+    <form class="form-wrapper addTask" action="index.html" method="post">
+      <fieldset class="box">
+        <legend>Task-Detail</legend>
+        <label for="from">From </label>
+        <input class="from box box-size" id="from" type="time" name="from" value="" required>
+        <label for="to">To</label>
+        <input class="to box box-size" id="to" type="time" name="to" value="{{minTime}}" min="{{minTime}}" max="23:59" required>
+        <label for="date">Date</label>
+        <input class="date box box-size" type="date" id="date" name="date" value="" required>
+        <label for="hours">Hours(hh:mm)</label>
+        <input class="hours box box-size" type="text" id="hours" name="hours" value="{{totalhours}}" disabled required>
+        <label for="price">Price(in $)</label>
+        <input class="price box box-size" type="number" id="price" name="price" min=0 max=200 step=5 value="20" required>
+        <label for="existing-classes">Class</label>
+        <select class="box-size existing-classes" id="existingClasses" name="existing-classes">
+          <option value="noselected" disabled selected>Choose any class</option>
+            <option value="class1">Class1</option>
+            <option value="class2">Class2</option>
+            <option value="class3">Class3</option>
+            <option value="class4">Class4</option>
+            <option value="class5">Class5</option>
+            <option value="class6">Class6</option>
+        </select>
+        <label for="existing-courses">Course</label>
+        <select class="box-size existing-courses" id="existingCourses" name="existing-courses">
+            <option value="cousre1" disabled selected>Choose any course</option>
+            <option value="cousre1">Cousre1</option>
+            <option value="cousre2">Cousre2</option>
+            <option value="cousre3">Cousre3</option>
+            <option value="cousre4">Cousre4</option>
+            <option value="cousre5">Cousre5</option>
+            <option value="cousre6">Cousre6</option>
+        </select>
+        <label for="task">Task</label>
+        <textarea class="task-area box box-size" id="task" name="task" placeholder="Enter description about Task here" required></textarea>
+      </fieldset>
+      <fieldset class="box">
+          <button class="submit-btn" type="submit" name="button">Submit</button>
+      </fieldset>
+    </form>
+  </div>
+</template>

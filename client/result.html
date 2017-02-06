@@ -1,0 +1,110 @@
+<template name="result">
+  <div class="resultant-wrapper">
+    <nav class="nav-container">
+      <a href="#" class="home btn">Back to home</a>
+      <a href="#" class="taskInsetion btn">Add Task</a>
+    </nav>
+    <div class="search-options">
+      <div class="search-area col1-3">
+        <input class="SearchByTask searchText" id="SearchByTask" type="text" name="searchText" value="" placeholder="Search by tasks">
+      </div>
+      <div class="more-search col2-3">
+        <h3 class="center">Other options to search data</h3>
+        <div class="other-options">
+          <label class="searching-label" for="searchFrom">
+            <input type="checkbox" id="searchFrom" name="From" value="From">
+            searchFrom
+           </label><!--
+        --><label class="searching-label" for="searchTo">
+            <input type="checkbox" id="searchTo" name="From" value="From">
+            searchTo
+          </label><!--
+       --><label class="searching-label" for="searchByDate">
+            <input type="checkbox" id="searchByDate" name="From" value="From">
+            searchByDate
+          </label><!--
+       --><label class="searching-label" for="searchByHours">
+            <input type="checkbox" id="searchByHours" name="From" value="From">
+            searchByHours
+          </label><!--
+       --><label class="searching-label" for="searchByClass">
+            <input type="checkbox" id="searchByClass" name="From" value="From">
+            searchByClass
+          </label><!--
+       --><label class="searching-label" for="searchByCourse">
+            <input type="checkbox" id="searchByCourse" name="From" value="From">
+            searchByCourse
+          </label>
+        </div>
+      </div>
+    </div>
+    <div class="Searching-elements">
+      <label for="from-element" id="from-label" class="hidden">From </label>
+      <input class="from-element commonFromTo box box-size hidden" id="from-element" type="time" name="from-element" value="" required>
+      <label class="option-label hidden" for="checkFrom" id="fromOption">
+           <input type="checkbox" id="checkFrom" name="From" value="From">
+          find approx. result
+      </label>
+      <label for="to-element" id="to-label" class="hidden">To</label>
+      <input class="to-element commonFromTo box box-size hidden" id="to-element" type="time" name="to-element" value="{{minTime}}" min="{{minTime}}" max="23:00" required>
+      <label class="option-label hidden" for="checkTo" id="toOption">
+           <input type="checkbox" id="checkTo" name="to" value="to">
+           find approx. result
+      </label>
+      <label for="date" id="date-label" class="hidden">Date</label>
+      <input class="date-element box box-size hidden" type="date" id="date-element" name="date-element" value="" required>
+      <label for="hours-element" id="hours-label" class="hidden">Hours(hh:mm)</label>
+      <input class="hours-element box box-size hidden" type="text" id="hours-element" name="hours-element" value="{{totalhours}}" placeholder="12:59" required>
+      <label class="option-label hidden" for="checkHours" id="hoursOption">
+           <input type="checkbox" id="checkHours" name="to" value="to">
+           find approx. result
+      </label>
+      <label for="existing-classes-element" id="class-label" class="hidden">Class</label>
+      <select class="box-size existing-classes-element hidden" id="existing-classes-element" name="existing-classes-element">
+        <option value="noselected" disabled selected>Choose any class</option>
+          <option value="class1">Class1</option>
+          <option value="class2">Class2</option>
+          <option value="class3">Class3</option>
+          <option value="class4">Class4</option>
+          <option value="class5">Class5</option>
+          <option value="class6">Class6</option>
+      </select>
+      <label for="existing-courses-element" id="course-label" class="hidden">Course</label>
+      <select class="box-size existing-courses-element hidden" id="existing-courses-element" name="existing-courses-element">
+          <option value="cousre1" disabled selected>Choose any course</option>
+          <option value="cousre1">Cousre1</option>
+          <option value="cousre2">Cousre2</option>
+          <option value="cousre3">Cousre3</option>
+          <option value="cousre4">Cousre4</option>
+          <option value="cousre5">Cousre5</option>
+          <option value="cousre6">Cousre6</option>
+      </select>
+    </div>
+    <div class="searched-data">
+      <table class="resultant-table" border="2">
+        <tr>
+          <th>from</th>
+          <th>to</th>
+          <th>date</th>
+          <th>hours</th>
+          <th>price</th>
+          <th>classes</th>
+          <th>course</th>
+          <th>task</th>
+        </tr>
+        {{#each getResult}}
+          <tr>
+            <td>{{from}}</td>
+            <td>{{to}}</td>
+            <td>{{date}}</td>
+            <td>{{hours}}</td>
+            <td>{{price}}</td>
+            <td>{{classes}}</td>
+            <td>{{course}}</td>
+            <td>{{task}}</td>
+          </tr>
+        {{/each}}
+      </table>
+    </div>
+  </div>
+</template>
