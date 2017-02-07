@@ -38,8 +38,19 @@ input{
 label{
   display: block;
   margin-top: 30px;
+  color: #293f50;
+  cursor: pointer;
+  font-weight: 400;
 }
-
+input,
+select,
+textarea {
+  border: 1px solid #c6c9cc;
+  border-radius: 5px;
+  cursor: pointer;
+  color: #888;
+  padding: 5px 8px;
+}
 .body-wrapper{
   height: 100%;
   width: 100%;
@@ -54,7 +65,7 @@ Home Page
 ================
 */
 .home-container{
-  background: #293f50;
+  background: radial-gradient(#648880, #293f50);
   width: 100%;
   height: 100%;
   display: flex;
@@ -106,6 +117,7 @@ form
 }
 .form-wrapper{
   background-color: rgb(255, 255, 255);
+  color: #293f50;
   width: 500px;
   margin: 30px auto;
   border-radius: 15px;
@@ -127,10 +139,18 @@ form
 .submit-btn{
   width: 150px;
   height: 35px;
-  background-color: #c0c0c0;
-  color: #808080;
+  background-color: #293f50;
+  color: #fff;
   margin: 0 auto;
+  border: 0;
+  padding: 11px 30px;
+  font-size: 14px;
 }
+
+.submit-btn:hover {
+  background: #77a198;
+}
+
 
 /*Labels*/
 .search-options{
@@ -157,11 +177,6 @@ form
 .option-label{
   display: inline;
   margin:0;
-}
-.com{
-  display: inline-block;
-  margin: 10px 20px;
-
 }
 /*
 ======================
