@@ -22,25 +22,45 @@ body,html,div{
 body,html{
   height: 100%;
 }
+body{
+  color: #fff;
+}
 
 a{
   text-decoration: none;
+  color: #293f50;
+  font-size: 18px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 }
+input{
+  background: transparent;
+}
+label{
+  display: block;
+  margin-top: 30px;
+}
+
 .body-wrapper{
   height: 100%;
   width: 100%;
 }
-
+.flex-container{
+  display: flex;
+  flex-direction: row;
+}
 /*
 ================
 Home Page
 ================
 */
 .home-container{
+   background: #293f50;
   width: 500px;
   height: 200px;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
@@ -50,8 +70,10 @@ Home Page
   display: flex;
   width: 100%;
   height: 70px;
-  background-color: rgb(128, 128, 128);
+  background-color:  #293f50;
   align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 .nav-wrapper{
 
@@ -59,30 +81,9 @@ Home Page
 /*Navigation Buttons*/
 .home{
   align-content: center;
-  margin-right: auto;
+  /*margin-right: auto;*/
 }
 
-/*Labels*/
-label{
-  display: block;
-  margin-top: 30px;
-
-}
-.searching-label{
-  display: inline-block;
-  margin: 0;
-  width: 31%;
-}
-.option-label{
-  display: inline;
-  margin:0;
-}
-
-.resultant-table{
-  border-collapse: collapse;
-  width: 800px;
-  margin: 0 auto;
-}
 .container{
   width: 100%;
   height: 100%;
@@ -102,11 +103,14 @@ form
   border: 2px solid #E2E2E2;
   overflow: scroll;
   height: 100%;
-  background-color: rgb(234, 237 , 237);
+  background-color: rgb(252, 226 , 210);
+  color: #000;
 }
 .form-wrapper{
+  background-color: rgb(255, 255, 255);
   width: 500px;
-  margin: 0 auto;
+  margin: 30px auto;
+  border-radius: 15px;
 }
 .task-area{
   color: #000000;
@@ -126,10 +130,37 @@ form
   width: 150px;
   height: 35px;
   background-color: #c0c0c0;
-  color: ##808080;
+  color: #808080;
   margin: 0 auto;
 }
 
+/*Labels*/
+.search-options{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  background-color: #fff;
+}
+.search-area,
+.more-search{
+  border: 1px solid #808080;
+  color: #0F2346;
+  padding-bottom: 20px;
+}
+.searching-label{
+  display: inline-block;
+  margin: 0;
+  width: 27%;
+}
+.option-label{
+  display: inline;
+  margin:0;
+}
+.com{
+  display: inline-block;
+  margin: 10px 20px;
+
+}
 /*
 ======================
 Resultant Search
@@ -145,7 +176,16 @@ Resultant Search
   justify-content: space-around;
   flex-wrap: wrap;
 }
-
+.searching-elements{
+  width: 350px;
+  margin: 20px auto;
+  color: #0F2346;
+  background-color: #fff;
+}
+.search-text{
+  height: 30px;
+  font-size: 18px;
+}
 /*
 ======================
 Searched table
@@ -153,23 +193,66 @@ Searched table
 .searched-data{
   padding: 15px;
   margin-top: 30px;
+  color: #0F2346;
 }
 
+.resultant-table{
+  border-collapse: collapse;
+  width: 800px;
+  margin: 0 auto;
+}
+table {
+  border-collapse: separate;
+  border-spacing: 0;
+  color: #4a4a4d;
+  font: 14px/1.4 "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+th,
+td {
+  padding: 10px 15px;
+  vertical-align: middle;
+}
+td{
+  text-align: center;
+}
+thead {
+  background: #395870;
+  color: #fff;
+}
+th:first-child {
+  text-align: left;
+}
+tbody tr:nth-child(even) {
+  background: #f0f0f2;
+}
+td {
+  border-bottom: 1px solid #cecfd5;
+  border-right: 1px solid #cecfd5;
+}
+td:first-child {
+  border-left: 1px solid #cecfd5;
+}
 /*
 =================
 Modular Classes
 =================
 */
 .btn{
-  width: 300px;
+  width: auto;
+  height: 30px;
+  padding: 10px 30px;
   color: rgb(46, 64, 83);
-  background-color: rgb(192, 192, 192);
+  background-color: rgb(255, 255, 255);
+  text-align: center;
 }
 .hidden{
   display: none;
 }
+.color{
+  color: #fff;
+}
 .col2-3{
-  width: 66%;
+  width: 67%;
 }
 .col1-3{
   width: 33%;

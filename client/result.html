@@ -2,11 +2,12 @@
   <div class="resultant-wrapper">
     <nav class="nav-container">
       <a href="#" class="home btn">Back to home</a>
+      <h1 class="center color"> View Task Detail</h1>
       <a href="#" class="taskInsetion btn">Add Task</a>
     </nav>
     <div class="search-options">
       <div class="search-area col1-3">
-        <input class="SearchByTask searchText" id="SearchByTask" type="text" name="searchText" value="" placeholder="Search by tasks">
+        <input class="SearchByTask search-text" id="SearchByTask" type="text" name="searchText" value="" placeholder="Search by tasks">
       </div>
       <div class="more-search col2-3">
         <h3 class="center">Other options to search data</h3>
@@ -38,7 +39,7 @@
         </div>
       </div>
     </div>
-    <div class="Searching-elements">
+    <div class="searching-elements">
       <label for="from-element" id="from-label" class="hidden">From </label>
       <input class="from-element commonFromTo box box-size hidden" id="from-element" type="time" name="from-element" value="" required>
       <label class="option-label hidden" for="checkFrom" id="fromOption">
@@ -81,30 +82,38 @@
       </select>
     </div>
     <div class="searched-data">
-      <table class="resultant-table" border="2">
-        <tr>
-          <th>from</th>
-          <th>to</th>
-          <th>date</th>
-          <th>hours</th>
-          <th>price</th>
-          <th>classes</th>
-          <th>course</th>
-          <th>task</th>
-        </tr>
-        {{#each getResult}}
-          <tr>
-            <td>{{from}}</td>
-            <td>{{to}}</td>
-            <td>{{date}}</td>
-            <td>{{hours}}</td>
-            <td>{{price}}</td>
-            <td>{{classes}}</td>
-            <td>{{course}}</td>
-            <td>{{task}}</td>
-          </tr>
-        {{/each}}
-      </table>
+      {{#if getResult}}
+        <table class="resultant-table" border="2">
+            <thead>
+              <tr>
+                <th>From</th>
+                <th>To</th>
+                <th>Date</th>
+                <th>Hours</th>
+                <th>Price</th>
+                <th>Classes</th>
+                <th>Course</th>
+                <th>Task</th>
+              </tr>
+            </thead>
+            <tbody>
+              {{#each getResult}}
+                <tr>
+                  <td>{{from}}</td>
+                  <td>{{to}}</td>
+                  <td>{{date}}</td>
+                  <td>{{hours}}</td>
+                  <td>{{price}}</td>
+                  <td>{{classes}}</td>
+                  <td>{{course}}</td>
+                  <td>{{task}}</td>
+                </tr>
+              {{/each}}
+            </tbody>
+          </table>
+              {{else}}
+              <p class="center">No Result Found</p>
+      {{/if}}
     </div>
   </div>
 </template>
