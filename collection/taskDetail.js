@@ -3,6 +3,10 @@ taskDetail= new Mongo.Collection('taskDetail');
 var Schemas={};
 
 Schemas.taskDetail= new SimpleSchema({
+  taskName: {
+    type: String,
+    label: "Task Name"
+  },
   from: {
     type : String,
     label : "from"

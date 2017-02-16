@@ -101,18 +101,27 @@ Home Page
   flex-wrap: wrap;
   overflow: auto;
 }
+/*.chart-wrapper{
+  background: radial-gradient(#648880, #293f50);
+  width: 100%;
+  height: auto;
+}*/
 /*
 ===========================
 form
 ===========================
 */
+.resultant-container{
+  width: 100%;
+  height: 100%;
+  background-color: rgb(252, 226 , 210);
+  overflow: scroll;
+}
 .form-container,
 .resultant-wrapper{
   box-sizing: border-box;
   border: 2px solid #E2E2E2;
-  overflow: scroll;
-  height: 100%;
-  background-color: rgb(252, 226 , 210);
+  height: auto;
   color: #000;
 }
 .form-wrapper{
@@ -250,6 +259,57 @@ td {
 td:first-child {
   border-left: 1px solid #cecfd5;
 }
+
+/*
+=================
+Chart
+=================
+*/
+.chartDiv{
+  justify-content: center;
+}
+.representation{
+  justify-content: center;
+  height: auto;
+}
+.visualChart,
+.tabular-data{
+  border: 1px solid #395870;
+  margin: 0 2rem;
+  margin-bottom: 1rem;
+  }
+  .child-chart{
+    background-color: rgb(125, 120, 30);
+    margin: 1rem;
+    font: 10px sans-serif;
+    padding: 3px;
+    color: white;
+    text-align: right;
+  }
+  .chart rect {
+    fill: steelblue;
+  }
+
+  .chart text {
+    fill: green;
+    font: 10px sans-serif;
+    text-anchor: end;
+  }
+
+  .axis text {
+    font: 10px sans-serif;
+  }
+
+  .axis path,
+  .axis line {
+    fill: none;
+    stroke: #000;
+    shape-rendering: crispEdges;
+  }
+  /*.x.axis path {
+  display: none;
+}*/
+
 /*
 =================
 Modular Classes
@@ -262,6 +322,7 @@ Modular Classes
   color: rgb(46, 64, 83);
   background-color: rgb(255, 255, 255);
   text-align: center;
+  border-radius: 10px;
 }
 .hidden{
   display: none;

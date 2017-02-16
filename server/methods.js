@@ -2,6 +2,7 @@ Meteor.methods({
   'insertTask': function(obj){
     // console.log("chlda");
     if(taskDetail.insert({
+      taskName: obj.taskName,
       from: obj.from,
       to: obj.to,
       hours: obj.hours,

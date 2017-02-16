@@ -1,0 +1,36 @@
+<template name="tabularForm">
+    {{#if getResult}}
+      <table class="resultant-table" border="2">
+          <thead>
+            <tr>
+              <th>Task Name</th>
+              <th>From</th>
+              <th>To</th>
+              <th>Date</th>
+              <th>Hours</th>
+              <th>Price</th>
+              <th>Classes</th>
+              <th>Course</th>
+              <th>Task Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            {{#each getResult}}
+              <tr>
+                <td>{{taskName}}</td>
+                <td>{{from}}</td>
+                <td>{{to}}</td>
+                <td>{{date}}</td>
+                <td>{{hours}}</td>
+                <td>{{price}}</td>
+                <td>{{classes}}</td>
+                <td>{{course}}</td>
+                <td>{{task}}</td>
+              </tr>
+            {{/each}}
+          </tbody>
+        </table>
+            {{else}}
+            <p class="center">No Result Found</p>
+    {{/if}}
+  </template>

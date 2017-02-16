@@ -83,6 +83,7 @@ Template.addTask.events({
   'submit form': function(event){
     event.preventDefault();
     var obj={
+    taskName: document.getElementById("taskName").value,
     from: document.getElementById("from").value,
     to: document.getElementById("to").value,
     hours: document.getElementById("hours").value,
@@ -94,7 +95,7 @@ Template.addTask.events({
   };
     console.log(obj);
     Meteor.call('insertTask',obj);
-
+    document.getElementById("taskName").value="";
     document.getElementById("from").value="";
     document.getElementById("to").value="";
     document.getElementById("hours").value="";
